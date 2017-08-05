@@ -1,8 +1,8 @@
-# Bangazon LLC
+# Bangazon Ltd
 
 ## The Personal E-Commerce Platform
 
-Bangazon LLC welcomes you to the team. You've been selected from a deep pool of candidates to help build the next, disruptive online platform. Our goal is to become the most personalized, and most powerful commericial platform for individuals all around the globe.
+Bangazon Ltd welcomes you to the team. You've been selected from a deep pool of candidates to help build the next, disruptive online platform. Our goal is to become the most personalized, and most powerful commericial platform for individuals all around the globe.
 
 You are needed to make that happen.
 
@@ -41,4 +41,4 @@ As you build subsequent projects, you will learn much of the foundational techno
 
 Once all teams have built the initial version of the API, you will receive your next project.
 
-Your management team will ensure that you have the proper training in the skills, concepts, and tools needed to complete the project, and then you will fulfill the requirements for the project until you are done, as defined in the [Bangazon Definition of Done](https://github.com/nashville-software-school/bangazon-llc/blob/master/EMPLOYEE_HANDBOOK.md#definition-of-done).
+Your management team will ensure that you have the proper training in the skills, concepts, and tools needed to complete the project, and then you will fulfill the requirements for the project until you are done, as defined in the [Bangazon Definition of Done](https://github.com/nashville-software-school/bangazon-ltd/blob/master/EMPLOYEE_HANDBOOK.md#definition-of-done).
