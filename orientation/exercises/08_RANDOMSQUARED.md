@@ -3,22 +3,22 @@
 ## Setup
 
 ```
-mkdir -p ~/workspace/python/exercises/lists && cd $_
-touch random_squared.py
+mkdir -p ~/workspace/ruby/exercises/lists && cd $_
+touch random_squared.rb
 ```
 
 ## References
 
-* [Random module](https://docs.python.org/3.6/library/random.html)
-* [Python Lists](https://docs.python.org/3.6/tutorial/datastructures.html)
+* [Random module](http://ruby-doc.org/core-2.0.0/Random.html)
+* [Ruby Arrays](https://ruby-doc.org/core-2.2.0/Array.html)
 
 ## Instructions
 
-1. Using the `random` module and the `range` method, generate a list of 20 random numbers between 0 and 49.
+1. Using the `Random` class, generate a list of 20 random numbers between 0 and 49.
     ```
-    import random
+    prng = Random.new
 
     random_numbers = [...insert awesome code here...]
-    print(random_numbers)
+    puts(random_numbers)
     ```
-2. With the resulting list, use a list comprehension to build a new list that contains each number squared. For example, if the original list is `[2, 5]`, the final list will be `[4, 25]`.
+2. With the resulting array, build a new array that contains each number squared. For example, if the original list is `[2, 5]`, the final list will be `[4, 25]`.

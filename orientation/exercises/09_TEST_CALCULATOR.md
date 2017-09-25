@@ -4,42 +4,40 @@ Just like you did in JavaScript when you learned about Jasmine, you're going to 
 
 ##### Starter code for test class
 
-> **Note**: The [`setUpClass`](https://docs.python.org/3.6/library/unittest.html#unittest.TestCase.setUpClass) method below must have the `@classmethod` decorator above it. 
+> **Note**: The [`setUpClass`](https://docs.python.org/3.6/library/unittest.html#unittest.TestCase.setUpClass) method below must have the `@classmethod` decorator above it.
 
-```python
-import unittest
-import calculator
+```ruby
+require 'minitest/autorun'
+require_relative 'calculator'
 
-def setUpModule():
-  print('set up module')
+class TestCalculator < Minitest::Test
 
-def tearDownModule():
-  print('tear down module')
+  def setup
+    puts "set up"
+  end
 
-class TestCalculator(unittest.TestCase):
+  def test_success
+    assert_equal 4, Calculator.new.add(2,2)
+  end
 
-  @classmethod
-  def setUpClass(self):
-    print('Set up class')
-    # Create an instance of the calculator that can be used in all tests
+  def test_failure
+    assert_equal 3, Calculator.new.add(2,2), "Adding doesn't work"
+  end
 
-  @classmethod
-  def tearDownClass(self):
-    print('Tear down class')
+  def teardown
+    puts "tear down"
+  end
 
-  def test_add(self):
-    self.assertEqual(self.calc.add(2, 7), 9)
 
   # Write test methods for subtract, multiply, and divide
 
-if __name__ == '__main__':
-    unittest.main()
+end
 ```
 
 ##### Starter code for calculator class
 
-```python
-class Calculator():
+```ruby
+class Calculator
     """Performs the four basic mathematical operations
 
     Methods:
@@ -49,7 +47,7 @@ class Calculator():
      divide(number,number)
     """
 
-    def add(self, firstOperand, secondOperand):
+    def add(firstOperand, secondOperand):
         """Adds two numbers together
 
         Arguments:
@@ -58,10 +56,12 @@ class Calculator():
         """
 
         return firstOperand + secondOperand
+    end
+end
 ```
 
 ## Running the test class
 
 ```
-python CalcTest.py -v
+ruby test_calculator.rb
 ```

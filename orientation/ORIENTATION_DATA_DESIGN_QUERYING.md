@@ -20,4 +20,4 @@ You will learn how to use the basics of the SQL language to add a table to a dat
 
 ### Additional Resources
 
-Django [database abstraction API](https://docs.djangoproject.com/en/1.10/topics/db/queries/)
+Django [Active Record Querying](http://guides.rubyonrails.org/active_record_querying.html)

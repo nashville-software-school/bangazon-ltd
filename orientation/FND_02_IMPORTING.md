@@ -1,35 +1,33 @@
 # Importing Modules
 
-Importing other modules in Python is very similar to how to did it in Browserify or including dependencies in Angular. Instead of the `require()` function in JavaScript, you use `import`.
+Importing other modules in Ruby is very similar to how to did it in Browserify or including dependencies in Angular. Ruby uses the keyword `require` as well but it is not required to give .rb extension
 
 ```
 # In JavaScript
 let $ = require('jquery');
 
 
-# In Python
-import http
+# In Ruby
+require http
 ```
 
 Python will look in every directory that is defined in `sys.path` for a file, or executable, that matches the name in your import statement. If you ever want to see those locations, you can just run the python interpreter in the CLI and take a look.
 
-```
-python
+By default, Ruby will look in all paths in the global variable `$LOAD_PATH` which contains an array. You can see this in your interactice Ruby shell from the CLI.
 
-Python 3.4.3 (default, Feb 20 2016, 13:01:44) 
-[GCC 4.2.1 Compatible Apple LLVM 7.0.2 (clang-700.1.81)] on darwin
-Type "help", "copyright", "credits" or "license" for more information.
->>> import sys
->>> sys.path
+```
+irb
+
+2.4.0 :001 > $LOAD_PATH
 ['', '/Users/student/.pyenv/versions/3.4.3/lib/python34.zip', '/Users/student/.pyenv/versions/3.4.3/lib/python3.4', '/Users/student/.pyenv/versions/3.4.3/lib/python3.4/lib-dynload', '/Users/student/.pyenv/versions/3.4.3/lib/python3.4/site-packages']
 
 ```
 
 ## Import Your Module
 
-Python will also look in the immediate directory for any files matching what you want to import. After it's imported, your can call any method in that module. Just precede it with the module name.
+After it's required, your can call any method in that module. Just precede it with the module name.
 
-```python
+```ruby
 modulename.function_name(arguments)
 ```
 
@@ -38,7 +36,7 @@ Consider the [`humansizes.py`](humansizes.py) file you created. In the same dire
 ```
 python
 
-Python 3.4.3 (default, Feb 20 2016, 13:01:44) 
+Python 3.4.3 (default, Feb 20 2016, 13:01:44)
 [GCC 4.2.1 Compatible Apple LLVM 7.0.2 (clang-700.1.81)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import humansizes
@@ -68,7 +66,7 @@ Convert a file size to human-readable form.
 
     Returns: string
 
-    
+
 
 ```
 
