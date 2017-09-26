@@ -10,7 +10,7 @@ touch humansizes.rb
 subl .
 ```
 
-Next, copy pasta the code in the [humansizes.rb](humansizes.rb) into yours. The first thing you might notice is the lack of curly braces defining the beginning and ending of a block of logic. Ruby only looks at line breaks.
+Next, copy pasta the code in the [humansizes.rb](humansizes.rb) into yours. 
 
 ## Running a Module of Code
 
@@ -25,19 +25,7 @@ Let's take a look at the code.
 ① SUFFIXES = {1000 => ["KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"],
             1024 => ["KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"]}
 
-② def approximate_size(size, a_kilobyte_is_1024_bytes=true):
-
-    '''Convert a file size to human-readable form.
-
-    Keyword arguments:
-    size -- file size in bytes
-    a_kilobyte_is_1024_bytes -- if true (default), use multiples of 1024
-                                if false, use multiples of 1000
-
-    Returns: string
-
-    '''
-    end
+② def approximate_size(size, a_kilobyte_is_1024_bytes=true)
 
 ③   if size < 0
         raise ArgumentError, "Argument must be non-negative"
@@ -60,7 +48,7 @@ Let's take a look at the code.
 
 ① This looks like an object from JavaScript, but in Ruby, it's called a hash.
 
-② In JavaScript, you used the `function` to define functions, but in Python, it's a method using the keywords `def` and `end`. Unlike JavaScript, functions are not first-class objects. Therefore, they can not be passed to other functions, returned from other functions or stored in a data structure.
+② In JavaScript, you used the `function` to define functions, but in Ruby, it's a method using the keywords `def` and `end`. Unlike JavaScript, functions are not first-class objects. Therefore, they can not be passed to other functions, returned from other functions or stored in a data structure.
 
 ③ For `if` and `for` blocks, you don't use {} to define the block scope. An if expression's conditional is separated from code by the reserved word then, a newline, or a semicolon. A `for` loop's expression is separated from code by the reserved word do, a newline, or a semicolon.
 
