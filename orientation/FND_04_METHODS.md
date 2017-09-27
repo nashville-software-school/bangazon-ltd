@@ -97,7 +97,7 @@ Some methods are there to answer questions about an object. In Ruby, these are c
 
 
 
-> name = "Ruby Monstas"
+> name = "Ruby"
 > name.start_with?("R")
 => true
 > name.start_with?("a")
