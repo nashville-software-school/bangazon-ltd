@@ -11,4 +11,3 @@ int randomVariable;
 randomVariable = "Scooby Doo"; // Illegal in statically typed languages
 ```
 
-This article that asks ["What is duck typing?"](https://ericlippert.com/2014/01/02/what-is-duck-typing/) is worth its weight in snakes for starting to understand duck typing in Python. The reponses to the author is where the real meat is, but please don't skip reading the article itself. It provides wonderful context for the responses.

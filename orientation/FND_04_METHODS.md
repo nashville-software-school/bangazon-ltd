@@ -1,6 +1,6 @@
 # Methods
 
-Just like JavaScript functions, but the syntax is different and now we always call them methods.
+Just like JavaScript functions, but the syntax is different and now we always call them [methods](https://ruby-doc.org/core-2.4.2/Method.html).
 
 ```ruby
 def display_name(name)
@@ -86,13 +86,31 @@ Sometimes, the methods we call change the object they are called on and return t
 ```
 
 
-Some methods are there to answer questions about an object. In Ruby, these are called predicate methods and they are written like this: 
+Some methods are there to answer questions about an object. In Ruby, these are called [predicate methods](http://ruby-for-beginners.rubymonstas.org/objects/predicates.html) and they are used like this: 
 
 ```ruby
+
 >> number = (24 * 6) / 3
 => 48
 >> number.even?
 => true
+
+
+
+> name = "Ruby Monstas"
+> name.start_with?("R")
+=> true
+> name.start_with?("a")
+=> false
+
+
+
+> 5.between?(1, 10)
+=> true
+
+> 5.between?(11, 20)
+=> false
+
 
 ```
 
@@ -101,16 +119,18 @@ Cool right? Again, Ruby gives us a bit more readability and mastery over our des
 
 ```ruby
 
-def is_even(number)
-  if number.even?
-    puts "the number is even"
-  else
-    puts "the number is odd"
-  end
-end
+
+number = 5
+
+if number.between?(1, 10)
+  puts "The number is between 1 and 10"
+elsif number.between?(11, 20)
+  puts "The number is between 11 and 20"
+else
+  puts "The number is bigger than 20"
+end 
 
 
-is_even(23)
 
 ```
 
