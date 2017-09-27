@@ -1,14 +1,24 @@
 # Importing Modules
 
-Importing other modules in Ruby is very similar to how to did it in Browserify or including dependencies in Angular. Ruby uses the keyword `require` as well.
+Importing other modules in Ruby is very similar to how to did it in Browserify or including dependencies in Angular. Ruby uses the keyword [`require`](https://ruby-doc.org/core-2.4.2/Kernel.html#method-i-require) as well.
 
 ```ruby
+
 require './humansizes.rb'
+
+```
+
+or 
+
+```ruby
+
+require_relative 'humansizes'
+
 ```
 
 Ruby will look in every directory that is defined in `sys.path` for a file, or executable, that matches the name in your import statement. If you ever want to see those locations, you can just run the Ruby interpreter in the CLI and take a look.
 
-By default, Ruby will look in all paths in the global variable `$LOAD_PATH` which contains an array. You can see this in your interactice Ruby shell from the CLI.
+By default, Ruby will look in all paths in the global variable `$LOAD_PATH ($:)`.which contains an array. You can see this in your interactice Ruby shell from the CLI.
 
 ```
 irb

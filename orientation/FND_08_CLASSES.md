@@ -40,20 +40,9 @@ In fact, the class instance is the first argument to **_any_** function defined 
 
 ```ruby
 
+
 class Zoo
-    """Contains methods for maintaining a Zoo
-
-    attr_accessor :zoo_name
-    attr_accessor :animals
-    attr_accessor :habitats
-    attr_accessor :visitors
-
-    Methods:
-    --------
-    build_habitat
-    sell_family_ticket
-    purchase_animal
-    """
+    
     def initialize(name):
         @zoo_name = name
         @animals = Hash.new
@@ -62,46 +51,21 @@ class Zoo
     end
 
     def build_habitat(name, type)
-        """Adds arrays to the habitats array in the format [name, type]
-
-        Method arguments:
-        -----------------
-        name(string) -- The marketing name of the habitat
-        type(string) -- The type of habitat (e.g. Saltwater, Savanna, Swamp, etc.)
-        """
-
         @habitats.push([name, type])
     end
 
+
     def sell_family_ticket(family)
-        """Adds an entire family to the array of visitors
-
-        Method argument:
-        -----------------
-        family(list) -- An array of people in a family of visitors
-        """
-
         @visitors.push(family)
     end
 
+
     def purchase_animal(type, name)
-        """Add an animal to the zoo
-
-        Method arguments:
-        -----------------
-        type(string) -- The type of animal to add
-        name(string) -- The given name of the animal
-        """
-
         @animals[name] = type
     end
 
-    def list_animals
-        """Lists all animals in the zoo
 
-        Method arguments:
-        n/a
-        """
+    def list_animals
         for key, value in @animals
             puts "#{@key} the #{value}"
         end
@@ -158,5 +122,5 @@ end
 
 # Additional Reading
 
-1. [An Introduction to Python Classes and Inheritance](http://www.jesshamrick.com/2011/05/18/an-introduction-to-classes-and-inheritance-in-python/)
-2. [Here is a very helpful video series on class inheritance](https://www.youtube.com/playlist?list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc)
+1. [Documentation for class Class in Ruby](https://ruby-doc.org/core-2.4.0/Class.html)
+2. [super simple explanation on video](https://www.youtube.com/watch?v=2OG0bbmNqQ4)
