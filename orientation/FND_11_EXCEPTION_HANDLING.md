@@ -12,20 +12,10 @@ class BankAccount
   end
 
   def add_money(amount)
-    """Add money to a bank account
-
-    Arguments:
-      amount - A numerical value by which the bank account's balance will increase
-    """
     @balance += amount
   end
 
   def withdraw_money(amount)
-    """Withdraw money to a bank account
-
-    Arguments:
-      amount - A numerical value by which the bank account's balance will decrease
-    """
     @balance -= amount
   end
 end
@@ -40,17 +30,12 @@ my_account.add_money('Gazillion dollars')
 
 This will raise a `TypeError` exception because the logic for the `add_money()` tries to perform a mathematical calculation on the value that is stored in the `amount` argument. We passed in a string, so Ruby will yell at us: `String can't be coerced into Integer`
 
-So we need to think about these kinds of issues when writing our code instead of assuming the the code that invokes this method will *always* do the correct thing. We need implement exception handling so that a useful exception is raised to the invoking code.
+So we need to think about these kinds of issues when writing our code instead of assuming the the code that invokes this method will *always* do the correct thing. We need to implement exception handling so that a useful exception is raised to the invoking code.
 
 Let's look at how to do that with `begin...rescue` blocks.
 
 ```ruby
   def add_money(amount)
-    """Add money to a bank account
-
-    Arguments:
-      amount - A numerical value by which the bank account's balance will increase
-    """
     begin
       self.balance += amount
       return self.balance
