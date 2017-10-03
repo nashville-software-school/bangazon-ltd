@@ -2,73 +2,56 @@
 
 ## Setup
 
-Here's your very first Python code module. Go ahead and create a new directory for storing your Python code and create a file named `humansizes.py`.
+Here's your very first Ruby code module. Go ahead and create a new directory for storing your Ruby code and create a file named `humansizes.rb`.
 
 ```
-mkdir ~/workspace/python/intro && cd $_
-touch humansizes.py
+mkdir ~/workspace/ruby/intro && cd $_
+touch humansizes.rb
 subl .
 ```
 
-Next, copy pasta the code in the [humansizes.py](humansizes.py) into yours. The first thing you might notice is the lack of curly braces defining the beginning and ending of a block of logic. In Python, indentation is king. Whitespace matters, unlike in JavaScript.
+Next, copy pasta the code in the [humansizes.rb](humansizes.rb) into yours. 
 
 ## Running a Module of Code
 
-In your CLI, execute the module of code by typing `python humansizes.py`.
+In your CLI, execute the module of code by typing `ruby humansizes.rb`.
 
 ## Code Review
 
 Let's take a look at the code.
 
-```python
-① SUFFIXES = {1000: ['KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'],
-            1024: ['KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB', 'YiB']}
+```ruby
 
-② def approximate_size(size, a_kilobyte_is_1024_bytes=True):
+① SUFFIXES = {1000 => ["KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"],
+            1024 => ["KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"]}
 
-    '''Convert a file size to human-readable form.
+② def approximate_size(size, a_kilobyte_is_1024_bytes=true)
 
-    (this is a docstring)
+③   if size < 0
+        raise ArgumentError, "Argument must be non-negative"
+    end
 
-    Keyword arguments:
-    size -- file size in bytes
-    a_kilobyte_is_1024_bytes -- if True (default), use multiples of 1024
-                                if False, use multiples of 1000
-
-    Returns: string
-
-    '''
-③   if size < 0:
-        raise ValueError('number must be non-negative')
-
-④   multiple = 1024 if a_kilobyte_is_1024_bytes else 1000
-    for suffix in SUFFIXES[multiple]:
+④   multiple = a_kilobyte_is_1024_bytes ? 1024 : 1000
+    for suffix in SUFFIXES[multiple]
         size /= multiple
-        if size < multiple:
-            return '{0:.1f} {1}'.format(size, suffix)
+        if size < multiple
+            return "{0:.1f} {1}".format(size, suffix)
+        end
+    end        
+    raise "Number too large"
 
-    raise ValueError('number too large')
-
-if __name__ == '__main__':
-⑤   print(approximate_size(16384, False))
-    print(approximate_size(size=16384, a_kilobyte_is_1024_bytes=False))
-    print(approximate_size(-16384))
+⑤   puts approximate_size(16384, False)
+    puts approximate_size(-16384)
 ```
 
-> ☞ Like JavaScript, Python is a dynamically typed language, meaning that the compiler determines the type of a variable at run-time.
+> ☞ Like JavaScript, Ruby is a dynamically typed language, meaning that the compiler determines the type of a variable at run-time. CLI prompting for input
 
-① This looks like an object from JavaScript, but in Python Land, it's called a dictionary
+① This looks like an object from JavaScript, but in Ruby, it's called a hash.
 
-② In JavaScript, you used the `function` to define functions, but in Python, it's `def`. Just like in JavaScript, functions are first-class objects and can be passed to other functions.
+② In JavaScript, you used the `function` to define functions, but in Ruby, it's a method using the keywords `def` and `end`. Unlike JavaScript, functions are not first-class objects. Therefore, they can not be passed to other functions, returned from other functions or stored in a data structure.
 
-③ For `if` and `for` blocks, you don't use {} to define the block scope. You use a colon, and then indent the corresponding code.
+③ For `if` and `for` blocks, you don't use {} to define the block scope. An if expression's conditional is separated from code by the reserved word then, a newline, or a semicolon. A `for` loop's expression is separated from code by the reserved word do, a newline, or a semicolon.
 
-④ This is the style for writing a ternary condition in Python.
+④ This is the style for writing a ternary condition in Ruby. Ruby methods ALWAYS return the evaluated result of the last line of the expression unless an explicit return comes before it.
 
-⑤ The `print()` method is Python's `console.log()`
-
-## The `__name__` of a Module
-
-Since everything in Python is an object, this entire module of code is an object when you execute it in the CLI. It automatically gets a `__name__` property, whose value is `__main__` because it was executed independently.
-
-When you learn about importing modules, you will learn how the `__name__` value will change in that situation.
+⑤ The `puts` method is Ruby's `console.log()`

@@ -1,75 +1,63 @@
 # Importing Modules
 
-Importing other modules in Python is very similar to how to did it in Browserify or including dependencies in Angular. Instead of the `require()` function in JavaScript, you use `import`.
+Importing other modules in Ruby is very similar to how to did it in Browserify or including dependencies in Angular. Ruby uses the keyword [`require`](https://ruby-doc.org/core-2.4.2/Kernel.html#method-i-require) as well.
+
+```ruby
+
+require './humansizes.rb'
 
 ```
-# In JavaScript
-let $ = require('jquery');
 
+or 
 
-# In Python
-import http
-```
+```ruby
 
-Python will look in every directory that is defined in `sys.path` for a file, or executable, that matches the name in your import statement. If you ever want to see those locations, you can just run the python interpreter in the CLI and take a look.
+require_relative 'humansizes'
 
 ```
-python
 
-Python 3.4.3 (default, Feb 20 2016, 13:01:44) 
-[GCC 4.2.1 Compatible Apple LLVM 7.0.2 (clang-700.1.81)] on darwin
-Type "help", "copyright", "credits" or "license" for more information.
->>> import sys
->>> sys.path
-['', '/Users/student/.pyenv/versions/3.4.3/lib/python34.zip', '/Users/student/.pyenv/versions/3.4.3/lib/python3.4', '/Users/student/.pyenv/versions/3.4.3/lib/python3.4/lib-dynload', '/Users/student/.pyenv/versions/3.4.3/lib/python3.4/site-packages']
+Ruby will look in every directory that is defined in `sys.path` for a file, or executable, that matches the name in your import statement. If you ever want to see those locations, you can just run the Ruby interpreter in the CLI and take a look.
+
+By default, Ruby will look in all paths in the global variable `$LOAD_PATH ($:)`.which contains an array. You can see this in your interactice Ruby shell from the CLI.
 
 ```
+irb
+
+irb(main):015:0> $LOAD_PATH
+=> ["/usr/local/Cellar/rbenv/1.1.1/rbenv.d/exec/gem-rehash", "/Users/casey/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib", "/Users/casey/.rbenv/versions/2.4.2/lib/ruby/site_ruby/2.4.0", "/Users/casey/.rbenv/versions/2.4.2/lib/ruby/site_ruby/2.4.0/x86_64-darwin16", "/Users/casey/.rbenv/versions/2.4.2/lib/ruby/site_ruby", "/Users/casey/.rbenv/versions/2.4.2/lib/ruby/vendor_ruby/2.4.0", "/Users/casey/.rbenv/versions/2.4.2/lib/ruby/vendor_ruby/2.4.0/x86_64-darwin16", "/Users/casey/.rbenv/versions/2.4.2/lib/ruby/vendor_ruby", "/Users/casey/.rbenv/versions/2.4.2/lib/ruby/2.4.0", "/Users/casey/.rbenv/versions/2.4.2/lib/ruby/2.4.0/x86_64-darwin16"]
+irb(main):016:0>
+
+```
+
+
+### Clear
+
+Wow! That's a lot of output! If, at any point you wanna clear your irb, just type:
+
+
+<kbd>control</kbd> + <kbd>L</kbd>
+
 
 ## Import Your Module
 
-Python will also look in the immediate directory for any files matching what you want to import. After it's imported, your can call any method in that module. Just precede it with the module name.
+Let's play with our module:
 
-```python
-modulename.function_name(arguments)
-```
+In the same directory as you humansizes.rb file, require that file as a module:
 
-Consider the [`humansizes.py`](humansizes.py) file you created. In the same directory, open the interpreter and import the file as a module.
-
-```
-python
-
-Python 3.4.3 (default, Feb 20 2016, 13:01:44) 
-[GCC 4.2.1 Compatible Apple LLVM 7.0.2 (clang-700.1.81)] on darwin
-Type "help", "copyright", "credits" or "license" for more information.
->>> import humansizes
->>> print(humansizes.approximate_size(80808080, True))
-77.1 MiB
-```
-
-Remember the `__name__` property of a module that had a value of `__main__` when executed independently. Well, when you import that same module into another one, the `__name__` is the file name.
-
-```
->>> print(humansizes.__name__)
-humansizes
-```
-
-## Reading a Function's docstring
-
-If you ever want to see the developer's documentation of a function, you can access the built-in `__doc__` property on the function.
-
-```
->>> print(humansizes.approximate_size.__doc__)
-Convert a file size to human-readable form.
-
-    Keyword arguments:
-    size -- file size in bytes
-    a_kilobyte_is_1024_bytes -- if True (default), use multiples of 1024
-                                if False, use multiples of 1000
-
-    Returns: string
-
-    
+```ruby
+require './humansizes.rb'
 
 ```
 
-Because this is so incredibly helpful, you need to get into the practice of providing a docstring for every method you write.
+
+After it's required, your can call any method in that module.
+
+
+```ruby
+
+irb(main):019:0> approximate_size(1924861984, false)
+=> "1 GB"
+
+```
+
+BOOM. You imported a module in you irb. We're gonna be doing this all over the place in the irb in our own files.

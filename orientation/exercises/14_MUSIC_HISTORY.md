@@ -3,7 +3,7 @@
 ## Setup
 
 ```
-mkdir -p ~/workspace/python/exercises/music-sql && cd $_
+mkdir -p ~/workspace/ruby/exercises/music-sql && cd $_
 touch queries.sql
 ```
 
@@ -56,7 +56,7 @@ $make install
 
 ## Downloading the Database Files
 
-Download the [musichistory.db](./assets/musichistory.db) file, and then copy it to the folder that you created for this exercise. That file **is** the database. It contains all of the tables and data. 
+Download the [musichistory.db](./assets/musichistory.db) file, and then copy it to the folder that you created for this exercise. That file **is** the database. It contains all of the tables and data.
 
 ## Instructions
 
