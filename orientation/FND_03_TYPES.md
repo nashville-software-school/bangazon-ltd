@@ -72,21 +72,40 @@ Ruby's String class is jam-packed with all kinds of fantastic functionality. It 
 In ruby, boolean can either be true or false. There is also a `nil` object in Ruby. These act a little different than you might expect coming from javascript and it would be qise to [read the docs](https://ruby-doc.org/core-2.1.1/TrueClass.html).
 
 ```ruby
-puts true.class
-puts false.class
-puts nil.class
+
+>> true.class
+=> TrueClass
+
+>> false.class
+=> FalseClass
+
+>> nil.class
+=> NilClass
+
 ```
 
 
 ## Symbols
 
-[Symbols](https://ruby-doc.org/core-2.4.2/Symbol.html) are denoted by the colon before the name and are immutable. A Symbol is the most basic Ruby object you can create. Think of it a super simple string. It's just a name and an internal ID. Symbols are useful because a given symbol name refers to the same object throughout a Ruby program. You will use symbols as ;the keys in you hashes. 
+[Symbols](https://ruby-doc.org/core-2.4.2/Symbol.html) are denoted by the colon before the name and are immutable. A Symbol is the most basic Ruby object you can create. Think of it a super simple cousin of the string. It's just a name and an internal ID. No extra methods Symbols are useful because a given symbol name refers to the same object throughout a Ruby program. You will use symbols as the keys in you hashes. 
 
 ```ruby
-puts :steve
-puts :steve.to_s
-puts :steve.object_id
-puts :steve.class
+
+>> :steve
+=> :steve
+
+>> steve_the_string = :steve.to_s
+=> "steve"
+
+>> steve_the_string.object_id
+=> 70272943158260
+
+>> :steve.object_id
+=> 1161948
+
+>> :steve.class
+=> Symbol
+
 ```
 
 
