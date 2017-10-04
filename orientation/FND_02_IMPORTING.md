@@ -45,7 +45,10 @@ Let's play with our module:
 In the same directory as you humansizes.rb file, require that file as a module:
 
 ```ruby
-require './humansizes.rb'
+
+▶ irb --simple-prompt
+>> require "./humansizes.rb"
+
 
 ```
 
@@ -60,4 +63,4 @@ irb(main):019:0> approximate_size(1924861984, false)
 
 ```
 
-BOOM. You imported a module in you irb. We're gonna be doing this all over the place in the irb in our own files.
+BOOM. You imported a module in you irb. We're gonna be doing this all over the place in the irb and in our own project files.
