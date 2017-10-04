@@ -6,6 +6,7 @@
 * [parameters, unpacking and variables](https://learnrubythehardway.org/book/ex13.html)
 * [prompting and passing](https://learnrubythehardway.org/book/ex14.html) 
 
+* [command line args on codecademy](https://www.codecademy.com/articles/ruby-command-line-argv)
 
 ## Setup
 
