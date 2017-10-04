@@ -1,15 +1,19 @@
 # Kill Nickelback
 
-In this exercises, you're going to use a conditional statements. Let's look at a basic example.
+In this exercise, you're going to use a conditional statements. Let's look at a basic example.
 
 ```ruby
 nums = Array(1..10)
 small_numbers = []
-nums.each {|i| small_numbers.push(i) if i < 6}
+
 # Only add numbers to the new list if the value is less than 6
+nums.each {|i| small_numbers.push(i) if i < 6}
+
 
 words = ['big', 'red', 'dog', 'ate', 'his', 'food']
 three_letters_words = []
+
+# put the 3-letter words in the three_letter_words array using the [shovel](https://ruby-doc.org/core-2.4.2/Array.html#method-i-3C-3C) operator
 for word in words
   if word.length ==3
     three_letters_words << word
