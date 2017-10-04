@@ -65,7 +65,7 @@ You can express values through string interpolation.
 Casey James Dailey is 31 years old.
 ```
 
-Ruby's [String](https://ruby-doc.org/core-2.4.0/String.html) class is jam-packed with all kinds of fantastic functionality. It is one of the many strengths of the language and it's worth getting to know more. 
+Ruby's String class is jam-packed with all kinds of fantastic functionality. It is one of the many strengths of the language and it's worth [reading the docs](https://ruby-doc.org/core-2.4.0/String.html). 
 
 ## Booleans & Nil
 
