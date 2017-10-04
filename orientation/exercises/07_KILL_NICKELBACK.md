@@ -13,7 +13,7 @@ nums.each {|i| small_numbers.push(i) if i < 6}
 words = ['big', 'red', 'dog', 'ate', 'his', 'food']
 three_letters_words = []
 
-# put the 3-letter words in the three_letter_words array using the [shovel](https://ruby-doc.org/core-2.4.2/Array.html#method-i-3C-3C) operator
+# put the 3-letter words in the three_letter_words array using the shovel operator
 for word in words
   if word.length ==3
     three_letters_words << word
