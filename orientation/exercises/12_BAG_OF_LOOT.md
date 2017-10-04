@@ -1,6 +1,11 @@
 # Bag o' Loot
 
-This exercises will help with your comprehension of [command line parameters](http://www.pythonforbeginners.com/argv/more-fun-with-sys-argv).
+### Read this article: [command line parameters](http://jnoconor.github.io/blog/2013/10/13/a-short-explanation-of-argv/).
+
+### Checkout these exercises too:
+* [parameters, unpacking and variables](https://learnrubythehardway.org/book/ex13.html)
+* [prompting and passing](https://learnrubythehardway.org/book/ex14.html) 
+
 
 ## Setup
 
@@ -79,7 +84,7 @@ How are they related to each other?
 
 How can you store that relationship when you are writing the data to disk?
 
-> **Pro tip:** The [uuid](https://docs.python.org/3/library/uuid.html?highlight=uuid#example) module in Python can generate universally unique identifiers for each set of data that you need to store. For example, there will be children with the same name, so you will need a truly unique identifier for each one.
+> **Pro tip:** The [SecureRandom](https://ruby-doc.org/stdlib-2.4.0/libdoc/securerandom/rdoc/SecureRandom.html) module in Ruby can generate universally unique identifiers for each set of data that you need to store. For example, there will be children with the same name, so you will need a truly unique identifier for each one.
 
 <table>
 <tr>
