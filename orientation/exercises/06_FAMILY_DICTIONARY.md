@@ -3,9 +3,13 @@
 ## Setup
 
 ```
-mkdir -p ~/workspace/ruby/exercises/family_dictionary && cd $_
-touch family_dict.rb
+mkdir -p ~/workspace/ruby/exercises/family_hash && cd $_
+touch family_hash.rb
 ```
+
+## Docs
+
+* [Ruby Hashes](http://ruby-doc.org/core-2.4.2/Hash.html)
 
 ## Instructions
 
