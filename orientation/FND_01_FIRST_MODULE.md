@@ -35,7 +35,7 @@ Let's take a look at the code.
     for suffix in SUFFIXES[multiple]
         size /= multiple
         if size < multiple
-            return "{0:.1f} {1}".format(size, suffix)
+            "#{size} #{suffix}"
         end
     end        
     raise "Number too large"
