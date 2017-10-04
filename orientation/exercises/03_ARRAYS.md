@@ -9,8 +9,8 @@ echo 'planet_list = ["Mercury", "Mars"]' >> planets.rb
 
 ## Reference
 
-* [Python Lists](https://docs.python.org/3.6/tutorial/datastructures.html)
-* [Learn Python - Lists](http://www.learnpython.org/en/Lists)
+* [Ruby Arrays](http://ruby-doc.org/core-2.4.2/Array.html)
+
 
 ## Exercise
 
