@@ -11,6 +11,7 @@ touch cars.rb
 
 * [Ruby sets](http://ruby-doc.org/stdlib-2.4.2/libdoc/set/rdoc/Set.html)
 * [Intersection](http://ruby-doc.org/stdlib-2.4.2/libdoc/set/rdoc/Set.html#method-i-intersection)
+* [Inspect](http://ruby-doc.org/stdlib-2.4.2/libdoc/set/rdoc/Set.html#method-i-inspect)
 
 ## Instructions
 
