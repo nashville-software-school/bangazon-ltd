@@ -17,7 +17,7 @@ touch employees.rb
     class Company
         #This represents a company in which people work
 
-        def initialize(self, name, title, start_date):
+        def initialize(self, name, title, start_date)
             @name = name
             @title = title
             @start_date = start_date
