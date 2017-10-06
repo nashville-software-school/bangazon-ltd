@@ -25,7 +25,7 @@ end
 
 class Dog < Animal
     def initialize(name)
-        Animal.new(name, "Dog")
+        super(name, "Dog")
     end
 # Sets the speed of the dog
     def walk
