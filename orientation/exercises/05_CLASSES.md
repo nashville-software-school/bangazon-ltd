@@ -15,17 +15,16 @@ touch employees.rb
 
     ```
     class Company
-        #This represents a company in which people work
-
-        def initialize(self, name, title, start_date)
-            @name = name
+        
+        def initialize(self, company_name, title, start_date)
+            @company_name = company_name
             @title = title
             @start_date = start_date
         end
 
-        def name
-            #Returns the name of the company
-            @name
+        #Returns the name of the company
+        def company_name
+            @company_name
         end
 
         # Add the remaining methods to fill the requirements above
