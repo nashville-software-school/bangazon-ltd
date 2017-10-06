@@ -16,10 +16,8 @@ touch employees.rb
     ```
     class Company
         
-        def initialize(company_name, title, start_date)
+        def initialize(company_name)
             @company_name = company_name
-            @title = title
-            @start_date = start_date
         end
 
         #Returns the name of the company
