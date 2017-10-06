@@ -24,9 +24,10 @@ touch employees.rb
         def company_name
             @company_name
         end
-
-        # Add the remaining methods to fill the requirements above
+   
     end
+    
+    # Add the remaining methods to fill the requirements above
     ```
 
 3. Consider the concept of [aggregation](https://github.com/nashville-software-school/bangazon-ltd/blob/master/orientation/FND_14_INHERIT_COMPOSE_AGGREGATE.md), and modify the `Company` class so that you assign employees to a company.
