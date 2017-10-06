@@ -32,5 +32,5 @@ touch employees.rb
     end
     ```
 
-3. Consider the concept of [aggregation](../FND_11_INHERIT_COMPOSE_AGGREGATE.md#aggregation), and modify the `Company` class so that you assign employees to a company.
+3. Consider the concept of [aggregation](https://github.com/nashville-software-school/bangazon-ltd/blob/master/orientation/FND_14_INHERIT_COMPOSE_AGGREGATE.md), and modify the `Company` class so that you assign employees to a company.
 4. Create a company, and three employees, and then assign the employees to the company.
