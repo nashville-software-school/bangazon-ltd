@@ -17,17 +17,19 @@ class Animal
         end
     end
 
-    # __str__ is a special function equivalent to toString() in JavaScript
-    def formatted_string
+    # over-riding the to_s method (this is what you'll see when you puts)
+    def to_s
         return "#{@name} is a #{@species}"
     end
 end
 
 class Dog < Animal
+    
     def initialize(name)
         super(name, "Dog")
     end
-# Sets the speed of the dog
+    
+    # Sets the speed of the dog
     def walk
         @speed = @speed + (0.2 * @legs)
     end
