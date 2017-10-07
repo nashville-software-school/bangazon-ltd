@@ -24,12 +24,18 @@ class TestCalculator < Minitest::Test
   def test_success
     assert_equal 4, @calc.add(2,2)
   end
+  
+  # Write test methods for subtract, multiply, and divide
+  
+  
+  
+  
 
   def teardown
     puts "tear down"
   end
 
-  # Write test methods for subtract, multiply, and divide
+  
 
 end
 ```
