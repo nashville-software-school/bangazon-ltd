@@ -2,9 +2,13 @@
 
 Just like you did in JavaScript when you learned about Jasmine, you're going to create a class that test the functionality of a Calculator class.
 
-##### Starter code for test class
+### Resources
 
-> **Note**: The [`setUpClass`](https://docs.python.org/3.6/library/unittest.html#unittest.TestCase.setUpClass) method below must have the `@classmethod` decorator above it.
+* [minitest documetation](http://docs.seattlerb.org/minitest/)
+* [repo](https://github.com/seattlerb/minitest)
+* [a good blog about minitest](http://blog.teamtreehouse.com/short-introduction-minitest)
+
+##### Starter code for test class
 
 ```ruby
 require 'minitest/autorun'
@@ -38,24 +42,9 @@ end
 
 ```ruby
 class Calculator
-    """Performs the four basic mathematical operations
 
-    Methods:
-     add(number, number)
-     subtract(number, number)
-     multiply(number, number)
-     divide(number,number)
-    """
-
-    def add(firstOperand, secondOperand):
-        """Adds two numbers together
-
-        Arguments:
-          firstOperand - Any number
-          secondOperand - An number
-        """
-
-        return firstOperand + secondOperand
+    def add(a, b) 
+      a + b
     end
 end
 ```
