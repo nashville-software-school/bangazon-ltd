@@ -15,22 +15,20 @@ touch employees.rb
 
     ```
     class Company
-        #This represents a company in which people work
-
-        def initialize(self, name, title, start_date):
-            @name = name
-            @title = title
-            @start_date = start_date
+        
+        def initialize(company_name)
+            @company_name = company_name
         end
 
-        def name
-            #Returns the name of the company
-            @name
+        #Returns the name of the company
+        def company_name
+            @company_name
         end
-
-        # Add the remaining methods to fill the requirements above
+   
     end
+    
+    # Add the remaining methods to fill the requirements above
     ```
 
-3. Consider the concept of [aggregation](../FND_11_INHERIT_COMPOSE_AGGREGATE.md#aggregation), and modify the `Company` class so that you assign employees to a company.
+3. Consider the concept of [aggregation](https://github.com/nashville-software-school/bangazon-ltd/blob/master/orientation/FND_14_INHERIT_COMPOSE_AGGREGATE.md), and modify the `Company` class so that you assign employees to a company.
 4. Create a company, and three employees, and then assign the employees to the company.

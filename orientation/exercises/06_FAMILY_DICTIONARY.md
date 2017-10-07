@@ -26,7 +26,7 @@ touch family_hash.rb
         }
     }
     ```
-2. Using array methods, produce output that looks like the following example.
+2. Produce output that looks like the following example.
     ```
     Krista is my sister and is 42 years old
     ```
