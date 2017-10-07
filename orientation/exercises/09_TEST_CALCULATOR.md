@@ -21,7 +21,7 @@ class TestCalculator < Minitest::Test
     @calc = Calculator.new
   end
 
-  def test_success
+  def test_add
     assert_equal 4, @calc.add(2,2)
   end
   
