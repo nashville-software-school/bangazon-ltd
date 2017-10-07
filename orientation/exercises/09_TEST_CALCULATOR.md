@@ -5,8 +5,8 @@ Just like you did in JavaScript when you learned about Jasmine, you're going to 
 ### Resources
 
 * [minitest documetation](http://docs.seattlerb.org/minitest/)
-* [repo](https://github.com/seattlerb/minitest)
-* [a good blog about minitest](http://blog.teamtreehouse.com/short-introduction-minitest)
+* [minitest repo](https://github.com/seattlerb/minitest)
+* [a good blog about getting started with minitest](http://blog.teamtreehouse.com/short-introduction-minitest)
 
 ##### Starter code for test class
 
