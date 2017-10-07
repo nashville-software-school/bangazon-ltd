@@ -3,7 +3,7 @@
 ## Setup
 
 ```
-mkdir -p ~/workspace/ruby/exercises/lists && cd $_
+mkdir -p ~/workspace/ruby/exercises/arrays && cd $_
 touch random_squared.rb
 ```
 
