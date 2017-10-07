@@ -24,7 +24,7 @@ end
 ## Setup
 
 ```
-mkdir -p ~/workspace/ruby/exercises/sets && cd $_
+mkdir -p ~/workspace/ruby/exercises/conditions && cd $_
 touch nickelback.rb
 ```
 
@@ -36,7 +36,6 @@ touch nickelback.rb
 
     Make sure that some of the songs are from the band Nickelback. You can see a [list of their greatest hits](https://www.amazon.com/Best-Nickelback-1/dp/B00FFERTUK/) on Amazon.
     ```
-    # Example set
     songs = [
         ['Nickelback', 'How You Remind Me'],
         ['Will.i.am', 'That Power'],
