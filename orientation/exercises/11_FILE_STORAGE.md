@@ -1,3 +1,10 @@
+# Working with Files in Ruby
+
+* [docs](https://ruby-doc.org/core-2.4.2/File.html)
+* [helpful exercise](https://learnrubythehardway.org/book/ex15.html)
+* [another helpful exercise](https://learnrubythehardway.org/book/ex16.html)
+
+
 # Car Models
 
 Use Ruby to build a console app that interacts with two files:
