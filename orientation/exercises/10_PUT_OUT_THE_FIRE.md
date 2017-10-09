@@ -23,7 +23,7 @@ touch main.rb
       end
 
       def patient_status(status)
-        raise ArgumentError,"Argument is not a string" unless age.is_a? String
+        raise ArgumentError,"Argument is not a string" unless status.is_a? String
 
         @status = status
       end
