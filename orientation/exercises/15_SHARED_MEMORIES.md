@@ -28,7 +28,7 @@ touch margaret.rb
 > **Tip:** For serialization, use `YAML.load()` and `YAML.dump()` so that file is a yaml file.
 
 
-###### Dictionary structure
+###### Hash structure
 
 ```ruby
 {
