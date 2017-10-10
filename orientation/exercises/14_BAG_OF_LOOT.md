@@ -8,6 +8,8 @@
 
 * [command line args on codecademy](https://www.codecademy.com/articles/ruby-command-line-argv)
 
+* [and this article](https://rubymonk.com/learning/books/4-ruby-primer-ascent/chapters/45-more-classes/lessons/104-serializing)
+
 ## Setup
 
 ```
