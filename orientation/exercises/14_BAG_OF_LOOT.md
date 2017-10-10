@@ -12,7 +12,7 @@
 
 ```
 mkdir -p ~/workspace/ruby/exercises/cli && cd $_
-touch lootbag.rb
+touch lootbag.rb test_lootbag.rb
 ```
 
 ## Instructions
