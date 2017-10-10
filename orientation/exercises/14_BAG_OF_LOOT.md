@@ -1,6 +1,6 @@
 # Bag o' Loot
 
-### Read this article: [command line parameters](http://jnoconor.github.io/blog/2013/10/13/a-short-explanation-of-argv/).
+### As always, READ THE DOCS: [command line parameters](http://ruby-doc.org/core-2.4.2/ARGF.html).
 
 ### Checkout these exercises too:
 * [parameters, unpacking and variables](https://learnrubythehardway.org/book/ex13.html)
