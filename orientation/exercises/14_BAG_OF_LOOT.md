@@ -7,7 +7,10 @@
 
 * [command line args on codecademy](https://www.codecademy.com/articles/ruby-command-line-argv)
 
-* [LRTHW 15, 16, 17, and 20](https://learnrubythehardway.org/book/) are all relevant.
+* [LRTHW 15, 16, 17, and 20](https://learnrubythehardway.org/book/) will help you read and write to files.
+
+* and [this article](https://rubymonk.com/learning/books/4-ruby-primer-ascent/chapters/45-more-classes/lessons/104-serializing) could help you take it to the next level with serializing
+
 ## Setup
 
 ```
