@@ -4,12 +4,10 @@
 
 ### Checkout these exercises too:
 * [parameters, unpacking and variables](https://learnrubythehardway.org/book/ex13.html)
-* [prompting and passing](https://learnrubythehardway.org/book/ex14.html) 
 
 * [command line args on codecademy](https://www.codecademy.com/articles/ruby-command-line-argv)
 
-* [and this article on serializing](https://rubymonk.com/learning/books/4-ruby-primer-ascent/chapters/45-more-classes/lessons/104-serializing)
-
+* [LRTHW 15, 16, 17, and 20](https://learnrubythehardway.org/book/) are all relevant.
 ## Setup
 
 ```
