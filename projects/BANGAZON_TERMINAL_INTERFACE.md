@@ -113,7 +113,7 @@ When selecting this option, you will produce a command line report that looks li
 ```bash
 Product           Orders     Customers  Revenue
 *******************************************************
-AA Batteries      100         20        $990.90 
+AA Batteries      100         20        $990.90
 Diapers           50          10        $640.95
 Case of Cracki... 40          30        $270.96
 *******************************************************
@@ -132,17 +132,7 @@ Totals:           190         60        $1,902.81
 You will create a series of prompts that will allow the user to create various types of data in your ordering system.
 
 1. Start with writing unit tests. As a group, determine the core functionality of the application. Define classes and methods that you think you need to build. Do that before writing the implementation code for core logic. DO NOT WRITE TESTS FOR THE USER INTERFACE (menu and prompts).
-1. All classes and methods must be fully documented with docstrings.
 
 ## Test Discovery
 
-Read the [Test Discovery section](https://docs.python.org/3.3/library/unittest.html#unittest-test-discovery) of the Python docs. It explains how you can run all tests inside a directory. This allows you to split your unit test suite into many, smaller, more maintainable modules, and the use a pattern matcher to find tests in all matching files.
-
-```
-python -m unittest discover -s . -p "Test*.py" -v
-```
-
-## Optional: Code Coverage
-
-You can use the Python tool [coverage.py](https://coverage.readthedocs.io/en/latest/), to ensure that your test suite has [100% coverage](http://blog.liw.fi/posts/unittest-coverage/) of your application's logic.
-
+Read the [Guide to Testing Rails Applications](http://guides.rubyonrails.org/testing.html). It explains how you can run all tests for yours rails application.
