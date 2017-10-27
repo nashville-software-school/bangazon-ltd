@@ -136,7 +136,3 @@ You will create a series of prompts that will allow the user to create various t
 ## Test Discovery
 
 Read the [Guide to Testing Rails Applications](http://guides.rubyonrails.org/testing.html). It explains how you can run all tests for yours rails application.
-
-```
-rails test
-```
