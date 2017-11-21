@@ -36,13 +36,13 @@ You will build a basic crowdfunding platform using the Ruby on Rails framework.
 1. Allow a user to upload a profile picture if they are logged in.
 2. Add Bootstrap and create a consistent color scheme and style throughout your website.
 3. Add functionality for users to bookmark projects if authenticated. This means there should a bookmark button on the project page(that's grayed out if they are not logged in). And a section on the `my account` page that shows the user's bookmarked projects with options to delete them.
-4. Add a `about us` link in the nav bar which takes the user to a page that tells them about the company and shows a team photo.
+4. Add an `about us` link in the nav bar which takes the user to a page that tells them about the company and shows a team photo.
 5. Take the multiple sections on the `my account` page and either separate them into different pages or tabs.
 6. On the individual projects page, where the rewards are listed, gray out the ones where the limit for people has been reached. And the rewards that are still available should be clickable. When the user clicks on it, they should be taken to the same page as when they click to support a project. But the reward they picked should already be selected. Keep in mind that a user needs to be authenticated before they are allowed to support a project.
 7. Add functionality for multiple comments for each project. This should appear at the bottom of the project page in a comments section. A user does not have to be authenticated to view all comments but they must be logged in to write a comment.
 
 ## Hints
 
-1. Go explore some of the reward based crowdfunding platforms like [Kickstarter](https://www.kickstarter.com/)(), [Indiegogo](https://www.indiegogo.com/en), [GoFundMe](https://www.gofundme.com/) to get a basic idea of how they work. Some of these are built using Ruby/Rails.
+1. Go explore some of the reward based crowdfunding platforms like [Kickstarter](https://www.kickstarter.com/), [Indiegogo](https://www.indiegogo.com/en), [GoFundMe](https://www.gofundme.com/) to get a basic idea of how they work. Some of these are built using Ruby/Rails.
 2. Once you understand the requirements, draw an ERD that will allow you to visualize how your entities will interact with each other and the user.
 3. Break down the application into smaller pieces and create tickets that will allow you to keep track of functionality that needs to be implemented. When creating tickets, start out high level and keep breaking it down until each ticket is small and approachable.
