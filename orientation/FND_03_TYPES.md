@@ -1,78 +1,199 @@
 # Types and Objects
 
-Everything is an object in Python.
+Everything is an object in Ruby and everything has a class.
 
 ```
->>> type(True)
-<class 'bool'>
->>> type(1)
-<class 'int'>
->>> def test():
-...   print("hello, world")
-... 
->>> type(test)
-<class 'function'>
->>> type(humansizes)
-<class 'module'>
->>> dictionary = { "color":"blue", "size":9090 }
->>> type(dictionary)
-<class 'dict'>
->>> atuple = ( "blue", 9090 )
->>> type(atuple)
-<class 'tuple'>
->>> reindeer = ["dasher", "dancer", "prancer", "vixen", "olive"]
->>> type(reindeer)
-<class 'list'>
->>> boy_bands = { "nsync", "one direction", "boyz II men" }
->>> type(boy_bands)
-<class 'set'>
+> nil.class
+=> NilClass
+
+> true.class
+=> TrueClass
+
+> 1.class
+=> Integer
+
+> 1.2345.class
+=> Float
+
+> def test
+?>   puts "hello world"
+?>end
+
+> test.class
+=> NilClass
+
+> hash = { "color" => "blue", "size" => 9090 }
+> hash.class
+=> Hash
+
+> reindeer = ["dasher", "dancer", "prancer", "vixen", "olive"]
+> reindeer.class
+=> Array
+
 ```
 
-## Lists
+## Numbers
 
-A [Python list](https://docs.python.org/3.6/tutorial/datastructures.html) is like an array in JavaScript. Just an unordered, untyped collection of any values. The example below is storing strings, an integer, and even another list inside a list.
+In ruby, numbers are either integers or floating point numbers.
 
-```python
-junk = list()
-junk = ['carrots', 'celery', 'kale', 2, ['peas', 'corn']] 
-junk.insert(1, 'kidney beans')
-junk.extend([True, 'tornado'])
-junk.append('hurricane')
-print(junk)
+```
+▶ irb --simple-prompt
+>> 5.class
+=> Integer
+>> 5.687.class
+=> Float
+>>
 ```
 
-## Dictionary
+## Strings
 
-A dictionary is like a literal object in JavaScript. A collection of key/value pairs.
+In ruby, a string is just some text. You can concatenate them. 
 
-```python
-junk = dict()
-junk = { 'name': 'Steve', 'age': 47, 'role': 'Head Coach' } 
-junk['kids'] = 2
-print(junk)
+```ruby
+>> name = "Casey"
+=> "Casey"
+>> full_name  = "Casey" + " " + "James" + " " + "Dailey"
+=> "Casey James Dailey"
 ```
 
-## Set
+You can express values through string interpolation.
 
-A is sort of like a list, except that each item is enforced to be unique. If you try to add an item that already exists in the set, no operation occurs.
-
-```python
-junk = set()
-junk.add('Scott')
-print(junk)
-{ 'Scott' }
-
-junk.add('Scott')
-print(junk)
-{ 'Scott' }
+```ruby
+>> age = 31
+=> 31
+>> puts "#{full_name} is #{age} years old."
+Casey James Dailey is 31 years old.
 ```
 
-## Tuple
+Ruby's String class is jam-packed with all kinds of fantastic functionality. It is one of the many strengths of the language and it's worth [reading the docs](https://ruby-doc.org/core-2.4.0/String.html). 
 
-A tuple is like a list except that it's immutable. You can't add or remove things from it. What makes them useful is that iterating over the elements is faster than a list.
+## Booleans & Nil
 
-```python
-junk = tuple()
-junk = ('Joe', 'Instructor', 'Awesome')
-print(junk)
+In ruby, boolean can either be true or false. There is also a `nil` object in Ruby. These act a little different than you might expect coming from javascript and it would be qise to [read the docs](https://ruby-doc.org/core-2.1.1/TrueClass.html).
+
+```ruby
+
+>> true.class
+=> TrueClass
+
+>> false.class
+=> FalseClass
+
+>> nil.class
+=> NilClass
+
+```
+
+
+## Symbols
+
+[Symbols](https://ruby-doc.org/core-2.4.2/Symbol.html) are denoted by the colon before the name and are immutable. A Symbol is the most basic Ruby object you can create. Think of it a super simple cousin of the string. It's just a name and an internal ID. No extra methods Symbols are useful because a given symbol name refers to the same object throughout a Ruby program. You will use symbols as the keys in you hashes. 
+
+```ruby
+
+>> :steve
+=> :steve
+
+>> steve_the_string = :steve.to_s
+=> "steve"
+
+>> steve_the_string.object_id
+=> 70272943158260
+
+>> :steve.object_id
+=> 1161948
+
+>> :steve.class
+=> Symbol
+
+```
+
+
+## Arrays
+
+A Ruby [arrays](https://ruby-doc.org/core-2.1.1/Array.html) are ordered, integer-indexed collections of any object. The example below is storing strings, an integer, and even another list inside a list. We're initializing the array with the new constructor, but you can also use the literal syntax as well.
+
+```ruby
+>> junk = Array.new(5)
+=> [nil, nil, nil, nil, nil]
+
+>> other_junk = []
+=> []
+```
+
+Ruby givesus many ways to put values into the array and access them:
+
+```
+
+# literal
+junk = ['carrots', 'celery', 'kale', 2, ['peas', 'corn']]
+
+# accessing item at index 4
+>> puts "#{junk.at(4)}"
+["peas", "corn"]
+
+# using insert
+>> junk.insert(1, 'kidney beans')
+=> ["carrots", "kidney beans", "celery", "kale", 2, ["peas", "corn"]]
+
+# using the shovel operator to add
+>> junk << [true, 'tornado']
+=> ["carrots", "kidney beans", "celery", "kale", 2, ["peas", "corn"], [true, "tornado"]]
+
+# good ole push
+>> junk.push('hurricane')
+=> ["carrots", "kidney beans", "celery", "kale", 2, ["peas", "corn"], [true, "tornado"], "hurricane"]
+
+```
+
+## Hashes
+
+A [Hash](https://ruby-doc.org/core-2.1.1/Hash.html) is a dictionary-like collection of unique keys and their values. Also called associative arrays, they are similar to Arrays, but where an Array uses integers as its index, a Hash allows you to use any object type. 
+
+```ruby
+
+# using the new constructor 
+>> junk = Hash.new
+=> {}
+
+# using literals to assogn string keys
+>> junk = { "name" => "Steve", "age" => 47, "role" => "Head Coach" }
+=> {"name"=>"Steve", "age"=>47, "role"=>"Head Coach"}
+
+#using computed member access to create and assign a value to the kids property
+junk["kids"] = 2
+=> 2
+>> junk
+=> {"name"=>"Steve", "age"=>47, "role"=>"Head Coach", "kids"=>2}
+
+#declaring with a literal
+>> nss = {}
+=> {}
+
+# now we're using symbols as the names for the keys
+# this is the convention, as symbols are super simple and therefore 
+# easier to track and handle
+nss[:best_cohort] = 21
+>> nss
+=> {:best_cohort=>21}
+>> nss[:graduates] = 500
+>> nss[:approach] = "full-stack immersion"
+>>  nss[:awesome] = true
+>>  
+>> nss
+=> {
+    :best_cohort=>21, 
+    :graduates=>500, 
+    :approach=>"full-stack immersion", 
+    :awesome=>true
+}
+
+```
+
+## Constants
+
+A [constant](https://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/constants.html) is all caps by convention. It should be assigned a value at most once. In the current implementation of ruby, reassignment of a constant generates a warning but not an error, but seriously, what good is a constant that you re-assign
+
+```ruby
+CONST = 101
 ```

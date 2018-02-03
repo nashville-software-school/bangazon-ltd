@@ -3,18 +3,18 @@
 ## Setup
 
 ```
-mkdir -p ~/workspace/python/exercises/djangomusic && cd $_
+mkdir -p ~/workspace/ruby/exercises/djangomusic && cd $_
 ```
 
 ## Instructions
 
-You are going to build your own Django powered web application. It will be very similar to what we built during the Django tutorial walkthrough.
+You are going to build your own Ruby on Rails powered web application. It will be very similar to what we built during the Rails tutorial walkthrough.
 
 ### Project Setup
 
-1. Create a Django [project](https://docs.djangoproject.com/en/1.11/intro/tutorial01/#creating-a-project) named `music`.
+1. Create a RoR [project](https://docs.djangoproject.com/en/1.11/intro/tutorial01/#creating-a-project) named `music`.
 1. Create a [new application](https://docs.djangoproject.com/en/1.11/intro/tutorial01/#creating-the-polls-app) in your project named `history`.
-1. In `history/urls.py`, define a route for listing artists, and one for show a specific artist's details.
+1. In `config.routes.rb`, define a route for listing artists, and one for show a specific artist's details.
 
 ### Models
 

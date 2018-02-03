@@ -19,7 +19,7 @@ Python doesn't have interfaces by name, but it does implement the concept with [
 
 In this sample interface, the properties and methods of a transaction are defined. You'll note that there are no implementation details at all. What is enforces is that any specific kind of transaction we define in our system that derives from this interface must implement these methods and properties.
 
-```py
+```ruby
 from abc import ABCMeta, abstractmethod
 
 

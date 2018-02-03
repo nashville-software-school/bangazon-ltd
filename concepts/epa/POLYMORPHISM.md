@@ -8,92 +8,71 @@ For example, in a base class of Animal, you define a general rule of how fast an
 
 This is subclass polymorphism - achieved with inheritance. Both `Dog` and `Animal` are typed as `Animal` so you have the same type exhibiting different behaviors.
 
-```python
-class Animal:
-    def __init__(self, name = None, species = None):
-        self.name = name
-        self.species = species
-        self.speed = 0
-        self.legs = 0
+```ruby
+class Animal
+    attr_accessor :name, :species, :speed, :legs
 
-    def walk(self):
-        print("Parent class walk method")
-        self.speed = self.speed + (0.1 * self.legs)
+    def initialize(name=nil, species=nil)
+        @name = name
+        @species = species
+        @speed = 0
+        @legs = 0
+    end
 
-    def __str__(self):
-        return "%s is a %s" % (self.name, self.species)
+    # Sets the speed of the animal
+    def walk
+        if @legs > 0
+            @speed = @speed + (0.1 * @legs)
+        else
+            raise TypeError, 'Legs property must contain a number greater than 0'
+        end
+    end
 
-class Dog(Animal):
-    def __init__(self, name):
-        Animal.__init__(name, "Dog")
+    # __str__ is a special function equivalent to toString() in JavaScript
+    def formatted_string
+        return "#{@name} is a #{@species}"
+    end
+end
 
-    # Override the parent method to add more functionality
-    def walk(self):
-        self.speed = self.speed + (0.2 * self.legs)
+class Dog < Animal
+    def initialize(name)
+        Animal.new(name, "Dog")
+    end
+# Sets the speed of the dog
+    def walk
+        @speed = @speed + (0.2 * @legs)
+    end
+end
 ```
 
 In Python, you can use the `super()` method, which allows a derived class to invoke the corresponding method in the parent class, possibly modifying its inputs or outputs before returning.
 
-```python
-class Animal:
-    def __init__(self, name = None, species = None):
-        self.name = name
-        self.species = species
+```ruby
+class Animal
+  attr_accessor :name, :species
 
-    def eat_food(self, food):
-        return "{0} eats {1}".format(self.name, food)
+  def initialize(name = nil, species = nil)
+    @name = name
+    @species = species
+  end
 
-class Panda(Animal):
-    def __init__(self, name):
-        super().__init__(name, "Panda")
+  def eat_food(food)
+      return "#{name}, #{food}"
+  end
+end
 
-    # The eat_food method's behavior is derived from the parent
-    # class, but is made more specialized in the derived class
-    def eat_food(self, food):
-        parent_message = super(Panda, self).eat_food(food)
-        message = ' '.join([parent_message, "but doesn't digest it very well"])
-        return message
+class Panda < Animal
+  def initialize(name)
+      super(name, "Panda")
+  end  
+  # The eat_food method's behavior is derived from the parent
+  # class, but is made more specialized in the derived class
+  def eat_food(food)
+      parent_message = super(food)
+      message = parent_message + " but doesn't digest it very well"
+      return message
+  end
+end
 ```
 
-# Ad Hoc Polymorphism
-
-There is another kind of polymorphism that is achieved by method overloading. What this means is that a method on a class can behave differently based on it signature. In Python, you achieve this via named method arguments with default values.
-
-Here's an example.
-
-```py
-class Building:
-
-  # Even though the method is defined once, the named arguments
-  # with default values actually produces multiple signatures
-  def collapse(source=None, site=None)
-    if source is None:
-      reason = "for no apparent reason"
-    else:
-      reason = "because a " + source + " hit it"
-
-    if site is None:
-      site = "into nothing"
-    else:
-      site = "into " + site
-
-    return "The building collapsed {} {}".format(site, reason)
-
-
-# Create an instance of the class
-leaning_tower = Building()
-
-# Method signature #1
-leaning_tower.collapse(source="gust of wind")
-
-# Method signature #2
-leaning_tower.collapse(site="a lagoon")
-
-# Method signature #3
-leaning_tower.collapse(site="the sidewalk", source="flock of birds")
-```
-
-# Resources
-
-* [Method overriding](http://blog.thedigitalcatonline.com/blog/2014/05/19/method-overriding-in-python/) in Python
 * [Object oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming)

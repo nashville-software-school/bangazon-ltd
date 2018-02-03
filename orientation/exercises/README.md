@@ -3,10 +3,9 @@
 This is a suggested order for completing the exercises in orientation:
 
 ## Basic collections and classes
-1. [Dictionaries](./01_DICTIONARIES.md)
+1. [Hashes](./01_HASHES.md)
 1. [Sets](./02_SETS.md)
-1. [Lists](./03_LISTS.md)
-1. [Tuples](./04_TUPLES.md)
+1. [Arrays](./03_ARRAYS.md)
 1. [Classes](./05_CLASSES.md)
 
 ## Intermediate exercises

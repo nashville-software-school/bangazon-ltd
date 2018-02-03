@@ -3,14 +3,15 @@
 ## Learning Objectives
 
 * ERD Development
-* Django view templates
-* Django DB Models
+* ERB view templates
+* Rails Models
+* Rails Controllers
 * Migrations
 * Authentication
 
 ## Requirements
 
-You will be building a Django application that will be the first, stable version of the Bangazon Platform product site.
+You will be building a Ruby on Rails application that will be the first, stable version of the Bangazon Platform product site.
 
 ### Models
 
@@ -22,7 +23,7 @@ You will be building a Django application that will be the first, stable version
 
 ### Generated Application
 
-Make sure you produce a layout with your `index.html` Django template for the application so that the structure of each page is consistent.
+Make sure you produce a layout with your `application.html.erb` in your `views/layouts` directory for the application so that the structure of each page is consistent.
 
 1. User registration and login.
 1. Product creation form for user to sell a product.
@@ -39,14 +40,30 @@ Make sure you produce a layout with your `index.html` Django template for the ap
 
 ## Resources
 
-### Django Models and Migrations
+### Rails Models and Migrations
 
-Using the requirements above create a [model](https://docs.djangoproject.com/en/1.10/topics/db/models/) for each resource, and use [migrations](https://docs.djangoproject.com/en/1.10/topics/migrations/) to ensure your database structure is up to date.
+Using the requirements above create a [model](http://guides.rubyonrails.org/active_record_basics.html) for each resource, and use [migrations](http://guides.rubyonrails.org/active_record_migrations.html) to ensure your database structure is up to date.
 
-### Templates
+[Validations in your model](http://guides.rubyonrails.org/active_record_validations.html)
+[Active Record Associations](http://guides.rubyonrails.org/association_basics.html)
+[Active Record Querying](http://guides.rubyonrails.org/active_record_querying.html)
 
-[Django template language](https://docs.djangoproject.com/en/1.10/ref/templates/language/)
+### ERB Templates
+
+[Layouts & Rendering](http://guides.rubyonrails.org/layouts_and_rendering.html)
 
 ### Form Helpers
 
-Django, like Angular, has many built-in [helper tags and filters](https://docs.djangoproject.com/en/1.10/ref/templates/builtins/) when building the site templates. We strongly recommend reading this documentation while building your templates.
+Rails, like Angular, has many built-in [helper tags and filters](http://guides.rubyonrails.org/form_helpers.html) when building the site templates. We strongly recommend reading this documentation while building your templates.
+
+### Controllers
+
+[Action Controller](http://guides.rubyonrails.org/action_controller_overview.html)
+
+### Routing
+
+[Rails Routing](http://guides.rubyonrails.org/routing.html)
+
+### Assets
+
+[The Asset Pipeline](http://guides.rubyonrails.org/asset_pipeline.html)

@@ -3,8 +3,8 @@
 ## Setup
 
 ```
-mkdir -p ~/workspace/python/exercises/classes && cd $_
-touch employees.py
+mkdir -p ~/workspace/ruby/exercises/classes && cd $_
+touch employees.rb
 ```
 
 ## Instructions
@@ -14,21 +14,21 @@ touch employees.py
 2. Copy this `Company` class into your module.
 
     ```
-    class Company(object):
-        """This represents a company in which people work"""
+    class Company
+        
+        def initialize(company_name)
+            @company_name = company_name
+        end
 
-        def __init__(self, name, title, start_date):
-            self.name = name
-            self.title = title
-            self.start_date = start_date
-
-        def get_name(self):
-            """Returns the name of the company"""
-            
-            return self.name
-
-        # Add the remaining methods to fill the requirements above
+        #Returns the name of the company
+        def company_name
+            @company_name
+        end
+   
+    end
+    
+    # Add the remaining methods to fill the requirements above
     ```
 
-3. Consider the concept of [aggregation](../FND_11_INHERIT_COMPOSE_AGGREGATE.md#aggregation), and modify the `Company` class so that you assign employees to a company. 
+3. Consider the concept of [aggregation](https://github.com/nashville-software-school/bangazon-ltd/blob/master/orientation/FND_14_INHERIT_COMPOSE_AGGREGATE.md), and modify the `Company` class so that you assign employees to a company.
 4. Create a company, and three employees, and then assign the employees to the company.
