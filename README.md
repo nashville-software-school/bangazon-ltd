@@ -1,8 +1,8 @@
-# Bangazon LLC
+# Bangazon Ltd
 
 ## The Personal E-Commerce Platform
 
-Bangazon LLC welcomes you to the team. You've been selected from a deep pool of candidates to help build the next, disruptive online platform. Our goal is to become the most personalized, and most powerful commericial platform for individuals all around the globe.
+Bangazon Ltd welcomes you to the team. You've been selected from a deep pool of candidates to help build the next, disruptive online platform. Our goal is to become the most personalized, and most powerful commericial platform for individuals all around the globe.
 
 You are needed to make that happen.
 
